@@ -6,13 +6,12 @@ func Next(n int) int {
 	}
 
 	prime := n
-	found := false
 
-	for !found {
+	for {
 		prime++
 
 		if Is(prime) {
-			found = true
+			break
 		}
 	}
 
