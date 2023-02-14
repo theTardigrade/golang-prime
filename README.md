@@ -16,7 +16,7 @@ import (
 )
 
 func main() {
-	magicNumber := 3
+	var magicNumber int64 = 3
 
 	fmt.Println(prime.Is(magicNumber))   // true
 	fmt.Println(prime.Next(magicNumber)) // 5
