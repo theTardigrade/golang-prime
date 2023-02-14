@@ -37,6 +37,14 @@ func main() {
 	fmt.Println(prime.Is(magicNumber))   // true
 	fmt.Println(prime.Next(magicNumber)) // 3
 	fmt.Println(prime.Prev(magicNumber)) // 0, false
+
+	fmt.Println("*****")
+
+	magicNumber = 1_000_000_000_000
+
+	fmt.Println(prime.Is(magicNumber))   // false
+	fmt.Println(prime.Next(magicNumber)) // 1000000000001, true
+	fmt.Println(prime.Prev(magicNumber)) // 999999999997, true
 }
 ```
 
