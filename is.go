@@ -1,5 +1,6 @@
 package prime
 
+// Is determines whether a given number is prime.
 func Is(n int) bool {
 	if n <= 1 {
 		return false

@@ -1,5 +1,6 @@
 package prime
 
+// Next returns the next prime number after a given number.
 func Next(n int) int {
 	if n <= 1 {
 		return 2
