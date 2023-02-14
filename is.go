@@ -19,10 +19,6 @@ func Is(n int64) bool {
 		return false
 	}
 
-	if n == math.MaxInt64 {
-		return true
-	}
-
 	if n < int64(math.Sqrt(math.MaxInt64)) {
 		for i := int64(5); i*i <= n; i += 6 {
 			if n%i == 0 || n%(i+2) == 0 {
