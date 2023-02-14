@@ -7,10 +7,12 @@ func Prev(n int64) (prime int64, exists bool) {
 	prime = n
 
 	for {
-		if prime--; prime <= 1 {
+		if prime <= 1 {
 			prime = 0
 			break
 		}
+
+		prime--
 
 		if Is(prime) {
 			exists = true
