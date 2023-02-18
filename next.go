@@ -36,7 +36,7 @@ func Next(n int64) (prime int64, exists bool) {
 	return
 }
 
-// Next returns the next prime number after a given number of arbitrary size.
+// BigNext returns the next prime number after a given number of arbitrary size.
 func BigNext(bigN *big.Int) (bigPrime *big.Int) {
 	if bigN.Cmp(bigOne) <= 0 {
 		bigPrime = big.NewInt(2)
