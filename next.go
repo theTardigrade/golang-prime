@@ -7,10 +7,10 @@ import (
 
 // Next returns the next prime number after a given 64-bit number.
 // It also returns a boolean value that is set to false if no
-// prime number exists after the given number &mdash;
-// not because there is no such number in the mathematical set of integers,
+// prime number exists after the given number
+// (not because there is no such number in the mathematical set of integers,
 // but rather because there is no such number that can be represented
-// by a 64-bit integer in Go.
+// by a 64-bit integer in Go).
 func Next(n int64) (prime int64, exists bool) {
 	if n <= 1 {
 		prime, exists = 2, true
@@ -59,10 +59,10 @@ func BigNext(bigN *big.Int) (bigPrime *big.Int) {
 
 // NextAdditive returns the next additive prime number after a given 64-bit number.
 // It also returns a boolean value that is set to false if no
-// additive prime number exists after the given number &mdash;
-// not because there is no such number in the mathematical set of integers,
+// additive prime number exists after the given number
+// (not because there is no such number in the mathematical set of integers,
 // but rather because there is no such number that can be represented
-// by a 64-bit integer in Go.
+// by a 64-bit integer in Go).
 func NextAdditive(n int64) (additivePrime int64, exists bool) {
 	if n <= 1 {
 		additivePrime, exists = 2, true
