@@ -51,13 +51,13 @@ func BigIs(bigN *big.Int) bool {
 	}
 
 	for bigI := big.NewInt(5); bigTemp.Mul(bigI, bigI).Cmp(bigN) <= 0; bigI.Add(bigI, bigSix) {
-		if bigTemp.Mod(bigN, bigI) == bigZero {
+		if bigTemp.Mod(bigN, bigI).Cmp(bigZero) == 0 {
 			return false
 		}
 
 		bigTemp.Add(bigI, bigTwo)
 
-		if bigTemp.Mod(bigN, bigTemp) == bigZero {
+		if bigTemp.Mod(bigN, bigTemp).Cmp(bigZero) == 0 {
 			return false
 		}
 	}
@@ -87,7 +87,7 @@ func BigIsAdditive(bigN *big.Int) bool {
 	bigTemp := new(big.Int)
 
 	for bigI := (new(big.Int)).Set(bigN); bigI.Cmp(bigZero) > 0; bigI.Div(bigI, bigTen) {
-		bigDigitSum.Add(bigDigitSum, bigTemp.Mod(bigDigitSum, bigTen))
+		bigDigitSum.Add(bigDigitSum, bigTemp.Mod(bigI, bigTen))
 	}
 
 	return BigIs(bigDigitSum)
